@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+“	<meta charset="UTF-8">
 	<title>NAPS - National Association to Promote Siestas</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
@@ -59,7 +59,9 @@ let quotesArray = [
 let randomNumber = Math.floor(Math.random() * quotesArray.length) //Generates a random number between 0 and 6 which will randomly put a quote everytime you reload the page. |||| Store that value in a variable called randomNumber
 
 
-document.getElementById('press-quote').textContent = quotesArray[randomNumber]// change the text content of the #press-quote element to one of the items in the quotesArray using a random number as the index selector.
+document.getElementById('press-quote').textContent = '“' + quotesArray[randomNumber].split(' — ')[0] + '”' + ' — ' + quotesArray[randomNumber].split // change the text content of the #press-quote element to one of the items in the quotesArray using a random number as the index selector.
+
+console.log(quotesArray[randomNumber].split(' — ')[0] )
 
 
 </script>
